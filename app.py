@@ -277,8 +277,8 @@ def render_sidebar() -> None:
         st.metric("Policy Documents", len(get_rag_engine().get_all_policies()))
         st.markdown("---")
         st.markdown(
-            "<small>v2.2.0 · EcoSort AI Engineering<br/>"
-            "© 2024 · MIT License</small>",
+            "<small>**EcoSort AI** · v1.0.0<br/>"
+            "Developed with ❤️ by **Anshu Kumar Gupta** <br/>© 2026 · All Rights Reserved</small>",
             unsafe_allow_html=True,
         )
 
