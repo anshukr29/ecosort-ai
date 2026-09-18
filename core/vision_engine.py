@@ -202,8 +202,8 @@ def _dict_to_report(data: dict, source: str) -> GarbageAuditReport:
 # Ordered list of vision-capable model names to try for area audit.
 # Mirrors WasteClassifier._GEMINI_MODELS — kept in sync manually.
 _GEMINI_MODELS = [
-      "models/gemini-1.5-flash",
-      "models/gemini-1.5-flash-8b",
+      "gemini-3.5-flash-lite",
+      "gemini-3.1-flash-lite",
 ]
 
 
