@@ -329,12 +329,8 @@ class WasteClassifier:
     # Ordered list of vision-capable model names to try.
     # The first model that responds without a 404/unsupported error is used.
     _GEMINI_MODELS = [
-        "gemini-2.5-flash",
-        "gemini-flash-latest",
-        "gemini-1.5-flash-latest",
-        "gemini-1.5-flash",
-        "gemini-1.5-pro",
-        "gemini-pro-vision",
+         "models/gemini-1.5-flash",
+         "models/gemini-1.5-flash-8b",
     ]
 
     @staticmethod
