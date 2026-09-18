@@ -68,6 +68,19 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Hide Top Header, Fork button and GitHub icons */
+        header[data-testid="stHeader"] {
+            display: none !important;
+        }
+        [data-testid="stToolbar"] {
+            display: none !important;
+        }
+        button[title="Fork this app"] {
+            display: none !important;
+        }
+        a[href*="github.com"] {
+            display: none !important;
+        }
         /* Main background */
         .stApp { background-color: #f8fafc; }
 
