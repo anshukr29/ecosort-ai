@@ -263,7 +263,7 @@ def render_sidebar() -> None:
         st.markdown("---")
         st.markdown(
             "**Mission:** Swachh Bharat & Zero-Waste Cities\n"
-            "<span class='sdg-pill'>SBM-U 2.0 11</span> "
+            "<span class='sdg-pill'>SBM-U 2.0</span> "
             "<span class='sdg-pill'>Mission LiFE</span>",
             unsafe_allow_html=True,
         )
