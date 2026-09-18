@@ -310,7 +310,7 @@ def _confidence_bar(score: float, method: str) -> None:
         "exact":          "Exact Match",
         "alias":          "Alias Match",
         "fuzzy":          "Fuzzy Match",
-        "gemini":         "Gemini AI Vision",
+        "gemini":         "EcoSort Vision Vision",
         "visual":         "Visual / Image Match",
         "visual_fallback":"Visual Fallback (low confidence)",
         "unmatched":      "No Match",
@@ -786,7 +786,7 @@ def tab_waste_analyzer() -> None:
         provider_tag  = (
             "<span style='background:#4285f4;color:white;border-radius:999px;"
             "padding:2px 8px;font-size:0.72rem;font-weight:700;margin-left:8px'>"
-            "Gemini AI</span>"
+            "EcoSort Vision</span>"
         ) if is_gemini else ""
         st.markdown(
             f"""
@@ -1048,7 +1048,8 @@ def tab_impact_metrics() -> None:
                          height:10px;border-radius:999px'></div>
                 </div>
                 {"" if sdg_achieved else f"<small style='color:#92400e'>Gap to close: {gap*100:.1f} percentage points</small>"}
-            </div>
+                </div>
+            
         </div>
         """,
         unsafe_allow_html=True,
