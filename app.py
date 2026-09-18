@@ -262,9 +262,9 @@ def render_sidebar() -> None:
         st.caption("Enterprise Waste Intelligence Platform")
         st.markdown("---")
         st.markdown(
-            "**Mission:** Zero-waste cities aligned with\n"
-            "<span class='sdg-pill'>SDG 11</span> "
-            "<span class='sdg-pill'>SDG 12</span>",
+            "**Mission:** Swachh Bharat & Zero-Waste Cities\n"
+            "<span class='sdg-pill'>SBM-U 2.0 11</span> "
+            "<span class='sdg-pill'>Mission LiFE</span>",
             unsafe_allow_html=True,
         )
         st.markdown("---")
@@ -345,7 +345,7 @@ def _render_garbage_audit_report(report) -> None:
 
     # ── Header with source badge ─────────────────────────────────────────
     source_labels = {
-        "gemini":    ("Google EcoSort AI Vision", "source-gemini"),
+        "gemini":    ("EcoSort AI Vision", "source-gemini"),
         "groq":      ("Groq Vision (LLaMA)",  "source-groq"),
         "heuristic": ("Heuristic Analysis",   "source-heuristic"),
     }
@@ -1394,10 +1394,10 @@ def main() -> None:
                 Enterprise Waste Intelligence & Policy Assistant
                 &nbsp;·&nbsp;
                 <span style='background:rgba(255,255,255,0.2);padding:2px 8px;
-                border-radius:999px;font-size:0.78rem'>SDG 11</span>
+                border-radius:999px;font-size:0.78rem'>SBM 2.0</span>
                 &nbsp;
                 <span style='background:rgba(255,255,255,0.2);padding:2px 8px;
-                border-radius:999px;font-size:0.78rem'>SDG 12</span>
+                border-radius:999px;font-size:0.78rem'>SWM Rules 2016</span>
             </p>
         </div>
         """,
@@ -1431,9 +1431,7 @@ def main() -> None:
         """
         <div style='text-align:center;margin-top:40px;padding-top:16px;
                     border-top:1px solid #e5e7eb;color:#9ca3af;font-size:0.78rem'>
-            EcoSort AI v2.1.0 &nbsp;·&nbsp; Enterprise Waste Intelligence Platform
-            &nbsp;·&nbsp; Aligned with UN SDG 11 & SDG 12
-            &nbsp;·&nbsp; MIT License © 2024
+            EcoSort AI · Built for Digital India | Aligned with Swachh Bharat Mission (SBM-U 2.0), SWM Rules 2016 & Mission LiFE
         </div>
         """,
         unsafe_allow_html=True,

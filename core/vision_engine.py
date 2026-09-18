@@ -4,7 +4,7 @@ EcoSort AI — Garbage Area Vision Engine
 Performs multimodal visual analysis of garbage dump / street-waste images.
 
 Priority order for analysis:
-  1. Google EcoSort AI Vision (gemini-1.5-flash)  — if GEMINI_API_KEY is set
+  1. EcoSort AI Vision (gemini-1.5-flash)  — if GEMINI_API_KEY is set
   2. Groq Vision (llama-3.2-11b-vision)       — if GROQ_API_KEY is set
   3. Heuristic fallback                        — deterministic rule-based
                                                  garbage composition estimate
@@ -196,7 +196,7 @@ def _dict_to_report(data: dict, source: str) -> GarbageAuditReport:
 
 
 # ---------------------------------------------------------------------------
-# Provider 1: Google EcoSort AI Vision  (google-generativeai, model fallback list)
+# Provider 1:EcoSort AI Vision  (google-generativeai, model fallback list)
 # ---------------------------------------------------------------------------
 
 # Ordered list of vision-capable model names to try for area audit.

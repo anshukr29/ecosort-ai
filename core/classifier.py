@@ -590,7 +590,7 @@ class WasteClassifier:
         street garbage, or mixed trash scene.
 
         Delegates to ``core.vision_engine.analyse_garbage_area`` which tries:
-          1. Google EcoSort AI Vision (if ``GEMINI_API_KEY`` env var is set)
+          1. EcoSort AI Vision (if ``GEMINI_API_KEY`` env var is set)
           2. Groq Vision        (if ``GROQ_API_KEY`` env var is set)
           3. Heuristic fallback (always available — never raises)
 
