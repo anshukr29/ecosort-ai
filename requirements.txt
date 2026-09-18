@@ -3,7 +3,7 @@ streamlit>=1.32.0
 python-dotenv>=1.0.0
 Pillow>=10.0.0
 
-# Google Gemini Vision
+# Google EcoSort AI Vision
 google-generativeai>=0.7.0
 
 # Groq Vision (fallback)

@@ -10,7 +10,7 @@ Also provides:
   - ``classify_from_image()``     — single-item visual classification via
       filename heuristics with hint-text override.
   - ``area_audit_from_image()``   — full garbage-area audit using
-      Gemini Vision / Groq Vision with deterministic heuristic fallback
+      EcoSort AI Vision / Groq Vision with deterministic heuristic fallback
       (delegates to ``core.vision_engine``).
 
 SDG Alignment: SDG 12 (Responsible Consumption & Production)
@@ -301,7 +301,7 @@ class WasteClassifier:
     # Image classification
     #
     # Priority chain for a call that carries actual image bytes:
-    #   1. Gemini Vision (gemini-1.5-flash) — if GEMINI_API_KEY is set
+    #   1. EcoSort AI Vision (gemini-1.5-flash) — if GEMINI_API_KEY is set
     #   2. hint_text / manual_override text — if provided
     #   3. Filename heuristic tag lookup
     #   4. Safe fallback → Plastic Bottle (confidence 0.35)
@@ -361,7 +361,7 @@ class WasteClassifier:
     @staticmethod
     def _call_gemini_for_item(image_bytes: bytes) -> str:
         """
-        Send *image_bytes* to the best available Gemini vision model and
+        Send *image_bytes* to the best available EcoSort AI Vision model and
         return the raw text response.
 
         Tries each entry in ``_GEMINI_MODELS`` in order.  A model is skipped
@@ -425,7 +425,7 @@ class WasteClassifier:
 
         # All models exhausted
         raise RuntimeError(
-            f"No working Gemini vision model found. "
+            f"No working EcoSort AI Vision model found. "
             f"Tried: {WasteClassifier._GEMINI_MODELS}. "
             f"Last error: {last_err}"
         )
@@ -464,7 +464,7 @@ class WasteClassifier:
 
         **Priority chain:**
 
-        1. **Gemini Vision** — if real image bytes are present and
+        1. **EcoSort AI Vision** — if real image bytes are present and
            ``GEMINI_API_KEY`` is set, the image is sent to
            ``gemini-1.5-flash`` with a structured item-identification prompt.
            The response is parsed and matched against the catalog.
@@ -514,7 +514,7 @@ class WasteClassifier:
         elif filename:
             resolved_filename = filename
 
-        # ── Step 1: Gemini Vision (real image bytes → AI detection) ────
+        # ── Step 1: EcoSort AI Vision (real image bytes → AI detection) ────
         # Raises on missing key or API failure — propagated to app.py for
         # display via st.error() so the exact error is always visible.
         if image_bytes and len(image_bytes) > 100:
@@ -594,7 +594,7 @@ class WasteClassifier:
         street garbage, or mixed trash scene.
 
         Delegates to ``core.vision_engine.analyse_garbage_area`` which tries:
-          1. Google Gemini Vision (if ``GEMINI_API_KEY`` env var is set)
+          1. Google EcoSort AI Vision (if ``GEMINI_API_KEY`` env var is set)
           2. Groq Vision        (if ``GROQ_API_KEY`` env var is set)
           3. Heuristic fallback (always available — never raises)
 

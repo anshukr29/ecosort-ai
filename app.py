@@ -345,7 +345,7 @@ def _render_garbage_audit_report(report) -> None:
 
     # ── Header with source badge ─────────────────────────────────────────
     source_labels = {
-        "gemini":    ("Google Gemini Vision", "source-gemini"),
+        "gemini":    ("Google EcoSort AI Vision", "source-gemini"),
         "groq":      ("Groq Vision (LLaMA)",  "source-groq"),
         "heuristic": ("Heuristic Analysis",   "source-heuristic"),
     }
@@ -585,7 +585,7 @@ def tab_waste_analyzer() -> None:
     with input_tab_img:
         st.markdown(
             "Upload a **JPG, JPEG, or PNG** photo of your waste item — "
-            "Gemini Vision will identify it directly from the image."
+            "EcoSort AI Vision will identify it directly from the image."
         )
         uploaded_file = st.file_uploader(
             "Choose an image",
@@ -640,7 +640,7 @@ def tab_waste_analyzer() -> None:
                 )
 
                 if st.button("🔍 Analyse Image", key="btn_analyse_upload", type="primary"):
-                    with st.spinner("Sending image to Gemini Vision…"):
+                    with st.spinner("Sending image to EcoSort AI Vision…"):
                         try:
                             img_bytes = uploaded_file.getvalue()
                             result = clf.classify_from_image(
@@ -656,14 +656,14 @@ def tab_waste_analyzer() -> None:
     with input_tab_cam:
         st.markdown(
             "Capture a photo of the waste item — "
-            "Gemini Vision will identify it automatically from the image."
+            "EcoSort AI Vision will identify it automatically from the image."
         )
         camera_image = st.camera_input("Take a photo of the waste item", key="cam_input")
 
         if camera_image is not None:
             st.image(camera_image, caption="📷 Camera capture", use_container_width=True)
             if st.button("🔍 Analyse Photo", key="btn_analyse_cam", type="primary"):
-                with st.spinner("Sending image to Gemini Vision…"):
+                with st.spinner("Sending image to EcoSort AI Vision…"):
                     try:
                         cam_bytes = camera_image.getvalue()
                         result = clf.classify_from_image(
@@ -672,13 +672,13 @@ def tab_waste_analyzer() -> None:
                         )
                         image_source = "camera"
                     except Exception as _cam_err:
-                        st.error(f"❌ Gemini Vision error: {_cam_err}")
+                        st.error(f"❌ EcoSort AI Vision error: {_cam_err}")
 
     # ── Garbage Area Audit ───────────────────────────────────────────────
     with input_tab_audit:
         st.markdown(
             "Upload or capture a photo of a **garbage dump, street waste pile, or mixed trash area**. "
-            "Gemini Vision will detect all visible waste types, generate a segregation breakdown, "
+            "EcoSort AI Vision will detect all visible waste types, generate a segregation breakdown, "
             "hazard assessment, and a step-by-step Hinglish action plan."
         )
 
@@ -712,7 +712,7 @@ def tab_waste_analyzer() -> None:
 
         if audit_image_data is not None:
             if st.button("🗺️ Run Garbage Area Audit", key="btn_audit", type="primary"):
-                with st.spinner("Sending image to Gemini Vision — please wait…"):
+                with st.spinner("Sending image to EcoSort AI Vision — please wait…"):
                     try:
                         audit_report = clf.area_audit_from_image(
                             audit_image_data,

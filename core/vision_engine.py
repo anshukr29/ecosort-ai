@@ -4,7 +4,7 @@ EcoSort AI — Garbage Area Vision Engine
 Performs multimodal visual analysis of garbage dump / street-waste images.
 
 Priority order for analysis:
-  1. Google Gemini Vision (gemini-1.5-flash)  — if GEMINI_API_KEY is set
+  1. Google EcoSort AI Vision (gemini-1.5-flash)  — if GEMINI_API_KEY is set
   2. Groq Vision (llama-3.2-11b-vision)       — if GROQ_API_KEY is set
   3. Heuristic fallback                        — deterministic rule-based
                                                  garbage composition estimate
@@ -196,7 +196,7 @@ def _dict_to_report(data: dict, source: str) -> GarbageAuditReport:
 
 
 # ---------------------------------------------------------------------------
-# Provider 1: Google Gemini Vision  (google-generativeai, model fallback list)
+# Provider 1: Google EcoSort AI Vision  (google-generativeai, model fallback list)
 # ---------------------------------------------------------------------------
 
 # Ordered list of vision-capable model names to try for area audit.
@@ -234,7 +234,7 @@ def _normalise_to_jpeg_rgb(image_bytes: bytes) -> bytes:
 
 def _analyse_with_gemini(image_bytes: bytes) -> GarbageAuditReport:
     """
-    Send the image to the first working Gemini vision model from
+    Send the image to the first working EcoSort AI Vision model from
     ``_GEMINI_MODELS`` and return a ``GarbageAuditReport``.
 
     Model selection:
@@ -299,7 +299,7 @@ def _analyse_with_gemini(image_bytes: bytes) -> GarbageAuditReport:
             raise
 
     raise RuntimeError(
-        f"No working Gemini vision model found. "
+        f"No working EcoSort AI Vision model found. "
         f"Tried: {_GEMINI_MODELS}. "
         f"Last error: {last_err}"
     )
