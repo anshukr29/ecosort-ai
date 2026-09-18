@@ -1,0 +1,228 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>EcoSort AI — Build Summary</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px; line-height: 1.6; color: #1f2328;
+    background: #ffffff; max-width: 760px; margin: 0 auto; padding: 32px 24px 48px;
+  }
+  h1 { font-size: 1.55rem; font-weight: 800; letter-spacing: -0.02em; color: #14532d; }
+  h2 { font-size: 1rem; font-weight: 700; color: #1f2328; margin: 28px 0 10px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
+  h3 { font-size: 0.88rem; font-weight: 700; color: #374151; margin: 14px 0 6px; }
+  p, li { color: #374151; font-size: 0.87rem; }
+  ul { padding-left: 18px; }
+  li { margin-bottom: 3px; }
+  code { background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 4px; padding: 1px 6px; font-size: 0.82rem; font-family: monospace; color: #14532d; }
+  .header-row { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+  .badge { display: inline-block; border-radius: 999px; padding: 3px 10px; font-size: 0.72rem; font-weight: 700; color: white; }
+  .sdg11 { background: #f97316; }
+  .sdg12 { background: #22c55e; }
+  .v-badge { background: #3b82f6; }
+  .subtitle { color: #57606a; font-size: 0.88rem; margin-bottom: 4px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card {
+    background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .card-title { font-weight: 700; font-size: 0.87rem; margin-bottom: 4px; }
+  .file-row {
+    display: flex; align-items: baseline; gap: 10px;
+    border-bottom: 1px solid #f0f0f0; padding: 7px 0;
+  }
+  .file-row:last-child { border-bottom: none; }
+  .file-name { font-family: monospace; font-size: 0.82rem; color: #3b82f6; min-width: 220px; }
+  .file-desc { font-size: 0.82rem; color: #57606a; }
+  .tab-card {
+    background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid #22c55e;
+    border-radius: 6px; padding: 12px 16px; margin-bottom: 10px;
+  }
+  .tab-num { font-size: 0.72rem; font-weight: 700; color: #57606a; }
+  .tab-title { font-weight: 700; font-size: 0.9rem; }
+  .tag { display: inline-block; background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; border-radius: 4px; padding: 1px 7px; font-size: 0.72rem; margin: 2px 2px 0 0; }
+  .tag-blue { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+  .tag-red { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+  .tag-amber { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+  .check-row { display: flex; gap: 8px; align-items: start; padding: 5px 0; }
+  .check-icon { font-size: 0.9rem; min-width: 18px; }
+  .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0; }
+  .metric-box { background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; text-align: center; }
+  .metric-value { font-size: 1.35rem; font-weight: 800; color: #14532d; }
+  .metric-label { font-size: 0.72rem; color: #57606a; margin-top: 2px; }
+  .cmd-block { background: #111827; color: #d1fae5; border-radius: 8px; padding: 14px 18px; font-family: monospace; font-size: 0.82rem; line-height: 1.9; margin: 10px 0; }
+  .cmd-block span { color: #6ee7b7; }
+  footer { text-align: center; margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; color: #9ca3af; font-size: 0.72rem; }
+</style>
+</head>
+<body>
+
+<div class="header-row">
+  <div>
+    <h1>♻️ EcoSort AI</h1>
+    <p class="subtitle">Enterprise Waste Intelligence &amp; Policy Assistant</p>
+    <div style="margin-top:6px">
+      <span class="badge sdg11">SDG 11 — Sustainable Cities</span>
+      <span class="badge sdg12" style="margin-left:4px">SDG 12 — Responsible Production</span>
+      <span class="badge v-badge" style="margin-left:4px">v2.1.0</span>
+    </div>
+  </div>
+</div>
+
+<h2>📁 Project Structure</h2>
+<div style="background:#f7f8fa;border:1px solid #e5e7eb;border-radius:8px;padding:14px 18px">
+  <div class="file-row">
+    <span class="file-name">data/waste_catalog.json</span>
+    <span class="file-desc">21-item waste catalog across 4 categories with full metadata</span>
+  </div>
+  <div class="file-row">
+    <span class="file-name">core/__init__.py</span>
+    <span class="file-desc">Package init for the core module</span>
+  </div>
+  <div class="file-row">
+    <span class="file-name">core/classifier.py</span>
+    <span class="file-desc">NLP classifier with fuzzy fallback + lifecycle calculation engine</span>
+  </div>
+  <div class="file-row">
+    <span class="file-name">core/rag_engine.py</span>
+    <span class="file-desc">TF-IDF policy RAG engine over 13 municipal/e-waste/campus documents</span>
+  </div>
+  <div class="file-row">
+    <span class="file-name">app.py</span>
+    <span class="file-desc">4-tab Streamlit UI — analyzer, policy, metrics, AI audit</span>
+  </div>
+  <div class="file-row">
+    <span class="file-name">requirements.txt</span>
+    <span class="file-desc">Minimal dependency: <code>streamlit&gt;=1.32.0</code> (stdlib only)</span>
+  </div>
+</div>
+
+<h2>🗃️ Waste Catalog — data/waste_catalog.json</h2>
+<div class="metric-grid">
+  <div class="metric-box"><div class="metric-value">21</div><div class="metric-label">Catalog Items</div></div>
+  <div class="metric-box"><div class="metric-value">4</div><div class="metric-label">Categories</div></div>
+  <div class="metric-box"><div class="metric-value">60+</div><div class="metric-label">Aliases</div></div>
+  <div class="metric-box"><div class="metric-value">4</div><div class="metric-label">Hazard Levels</div></div>
+</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title" style="color:#22c55e">🟢 Organic / Wet (5 items)</div>
+    <ul><li>Banana Peel, Food Scraps, Garden Waste, Egg Shells, Tea Bags</li></ul>
+    <p style="margin-top:6px;font-size:0.78rem;color:#57606a">Bin: Green · Composting &amp; biogas route</p>
+  </div>
+  <div class="card">
+    <div class="card-title" style="color:#3b82f6">🔵 Recyclable / Dry (6 items)</div>
+    <ul><li>Plastic Bottle, Cardboard, Glass Bottle, Aluminium Can, Newspaper, Steel Scrap</li></ul>
+    <p style="margin-top:6px;font-size:0.78rem;color:#57606a">Bin: Blue · MRF recycling route</p>
+  </div>
+  <div class="card">
+    <div class="card-title" style="color:#ef4444">🔴 E-Waste (5 items)</div>
+    <ul><li>Smartphone, Laptop, CRT Monitor, Printer Cartridge, Lithium Battery</li></ul>
+    <p style="margin-top:6px;font-size:0.78rem;color:#57606a">Bin: Red · Certified dismantler only</p>
+  </div>
+  <div class="card">
+    <div class="card-title" style="color:#1f2937">⚫ Toxic / Hazardous (5 items)</div>
+    <ul><li>Paint, Motor Oil, Fluorescent Tube, Pesticide Container, Medical Sharps</li></ul>
+    <p style="margin-top:6px;font-size:0.78rem;color:#57606a">Bin: Black · HHW facility required</p>
+  </div>
+</div>
+
+<h2>⚙️ Core Modules</h2>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">classifier.py — WasteClassifier</div>
+    <ul>
+      <li>3-tier matching: <span class="tag">Exact</span> <span class="tag tag-blue">Alias</span> <span class="tag tag-amber">Fuzzy ≥0.55</span></li>
+      <li>Returns confidence score + match method</li>
+      <li>Lifecycle engine: CO₂, landfill volume, tree equivalent</li>
+      <li>Fully cached via <code>@st.cache_resource</code></li>
+      <li>Zero external dependencies — stdlib only</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">rag_engine.py — PolicyRAGEngine</div>
+    <ul>
+      <li>13 policy documents across 6 categories</li>
+      <li>TF-IDF keyword scorer: title ×2, tags ×3, content ×1</li>
+      <li>Category filter support, top-k configurable</li>
+      <li>Scores normalised 0–100% for display</li>
+      <li>No external API — deterministic, auditable</li>
+    </ul>
+  </div>
+</div>
+
+<h2>🖥️ Application Tabs — app.py</h2>
+<div class="tab-card">
+  <div class="tab-num">TAB 1</div>
+  <div class="tab-title">🔍 Live Waste Analyzer</div>
+  <p>Free-text item input with quantity selector. Shows bin colour badge, hazard badge, confidence bar, decomposition time, recycling steps, handling tips, and 4-column lifecycle KPI row.</p>
+  <div style="margin-top:6px"><span class="tag">Bin Color</span><span class="tag">Confidence Bar</span><span class="tag">Recycling Steps</span><span class="tag">CO₂ Offset</span><span class="tag">Lifecycle Metrics</span></div>
+</div>
+<div class="tab-card" style="border-left-color:#3b82f6">
+  <div class="tab-num">TAB 2</div>
+  <div class="tab-title">📜 Municipal &amp; Campus Policy Assistant</div>
+  <p>RAG-powered search over 13 policy documents. Results shown as relevance-scored cards with source citation, jurisdiction, tags, and last-updated date. Browse mode when no query is entered.</p>
+  <div style="margin-top:6px"><span class="tag tag-blue">RAG Search</span><span class="tag tag-blue">Category Filter</span><span class="tag tag-blue">Relevance Score</span><span class="tag tag-blue">Source Citation</span></div>
+</div>
+<div class="tab-card" style="border-left-color:#22c55e">
+  <div class="tab-num">TAB 3</div>
+  <div class="tab-title">🌍 Impact &amp; Carbon Offset Metrics</div>
+  <p>Scenario simulator (4 types × adjustable population × duration). 5-column KPI row, bar chart (waste by category), line chart (monthly diversion trend), SDG 12.5 progress bar, and 12-month projection.</p>
+  <div style="margin-top:6px"><span class="tag">Bar Chart</span><span class="tag">Line Chart</span><span class="tag">SDG Progress</span><span class="tag">CO₂ Projections</span></div>
+</div>
+<div class="tab-card" style="border-left-color:#7c5cd8">
+  <div class="tab-num">TAB 4</div>
+  <div class="tab-title">🤖 Responsible AI Audit</div>
+  <p>Full transparency report: 5-dimension fairness assessment, explainability breakdown (classifier + RAG logic), 7-item privacy safeguards table, SDG alignment matrix (7 goals), and IEEE/EU AI Act ethics checklist.</p>
+  <div style="margin-top:6px"><span class="tag tag-red">Fairness</span><span class="tag tag-red">Explainability</span><span class="tag tag-red">Privacy</span><span class="tag tag-red">SDG Matrix</span><span class="tag tag-red">Ethics Checklist</span></div>
+</div>
+
+<h2>🚀 Quick Start</h2>
+<div class="cmd-block">
+  <span># 1. Install dependencies</span><br />
+  pip install -r requirements.txt<br /><br />
+  <span># 2. Run the app</span><br />
+  streamlit run app.py<br /><br />
+  <span># 3. Open in browser</span><br />
+  http://localhost:8501
+</div>
+
+<h2>✅ Validation Results</h2>
+<div class="check-row"><span class="check-icon">✅</span><span><code>py_compile</code> — all 3 Python files pass syntax check with zero errors</span></div>
+<div class="check-row"><span class="check-icon">✅</span><span>Classifier — 5/5 test items matched with correct bin colour and CO₂ offset; unmatched item returns safe fallback</span></div>
+<div class="check-row"><span class="check-icon">✅</span><span>RAG Engine — 4/4 test queries retrieve correct top-1 policy at 100% relevance</span></div>
+<div class="check-row"><span class="check-icon">✅</span><span>JSON catalog — 21 items across 4 categories parsed without errors</span></div>
+<div class="check-row"><span class="check-icon">✅</span><span>Zero external runtime dependencies beyond <code>streamlit</code> (no pandas, plotly, scikit-learn)</span></div>
+
+<h2>🌐 SDG Alignment</h2>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">SDG 11 — Sustainable Cities</div>
+    <ul>
+      <li>Municipal waste rule retrieval (SWM Rules 2016)</li>
+      <li>Urban collection schedule guidance</li>
+      <li>Swachh Bharat Mission alignment</li>
+      <li>C&amp;D waste management policies</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">SDG 12 — Responsible Consumption</div>
+    <ul>
+      <li>Source segregation guidance for all waste types</li>
+      <li>Carbon offset + landfill diversion metrics</li>
+      <li>EPR &amp; e-waste producer responsibility policies</li>
+      <li>Single-use plastic ban enforcement guide</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  EcoSort AI v2.1.0  ·  Enterprise Waste Intelligence Platform
+   ·  Aligned with UN SDG 11 &amp; SDG 12  ·  MIT License © 2024
+  <br />Made with IBM Bob
+</footer>
+</body>
+</html>

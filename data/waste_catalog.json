@@ -1,0 +1,419 @@
+{
+  "metadata": {
+    "version": "2.1.0",
+    "last_updated": "2024-01-15",
+    "sdg_alignment": ["SDG 12", "SDG 11"],
+    "source": "EcoSort AI Waste Intelligence Catalog"
+  },
+  "categories": {
+    "organic_wet": {
+      "display_name": "Organic / Wet Waste",
+      "bin_color": "Green",
+      "bin_hex": "#22c55e",
+      "handling_summary": "Compost or biogas plant. Do not mix with dry waste.",
+      "items": [
+        {
+          "id": "ORG-001",
+          "name": "Banana Peel",
+          "aliases": ["banana skin", "banana rind"],
+          "primary_material": "Organic cellulose",
+          "decomposition_years": 0.17,
+          "recycling_steps": [
+            "Collect in green bin",
+            "Transfer to compost bin or biogas unit",
+            "Can be used as natural fertilizer after composting"
+          ],
+          "carbon_offset_kg_per_kg": 0.3,
+          "landfill_space_cm3_per_unit": 120,
+          "weight_kg_per_unit": 0.08,
+          "handling_tips": "Ideal for vermicomposting. Rich in potassium.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "ORG-002",
+          "name": "Food Scraps",
+          "aliases": ["leftover food", "kitchen waste", "food waste", "vegetable peels", "fruit scraps"],
+          "primary_material": "Mixed organic matter",
+          "decomposition_years": 0.08,
+          "recycling_steps": [
+            "Segregate in green lidded bin",
+            "Transport to municipal composting facility",
+            "Convert to compost or biogas"
+          ],
+          "carbon_offset_kg_per_kg": 0.5,
+          "landfill_space_cm3_per_unit": 500,
+          "weight_kg_per_unit": 0.3,
+          "handling_tips": "Avoid putting oily or salted food in compost bins. Use bokashi for cooked food.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "ORG-003",
+          "name": "Garden Waste",
+          "aliases": ["dry leaves", "grass clippings", "twigs", "plant trimmings", "yard waste"],
+          "primary_material": "Lignocellulosic biomass",
+          "decomposition_years": 0.5,
+          "recycling_steps": [
+            "Collect in green bin or biodegradable bag",
+            "Shred for faster composting",
+            "Mix with kitchen scraps for balanced compost"
+          ],
+          "carbon_offset_kg_per_kg": 0.2,
+          "landfill_space_cm3_per_unit": 2000,
+          "weight_kg_per_unit": 0.5,
+          "handling_tips": "Excellent carbon source for compost pile. Avoid chemically treated plants.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "ORG-004",
+          "name": "Egg Shells",
+          "aliases": ["egg shell", "eggshell"],
+          "primary_material": "Calcium carbonate",
+          "decomposition_years": 0.2,
+          "recycling_steps": [
+            "Rinse and dry",
+            "Crush and add to compost for calcium boost",
+            "Can be used directly as soil amendment"
+          ],
+          "carbon_offset_kg_per_kg": 0.1,
+          "landfill_space_cm3_per_unit": 20,
+          "weight_kg_per_unit": 0.01,
+          "handling_tips": "Crushed eggshells deter garden pests. Excellent compost additive.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "ORG-005",
+          "name": "Tea Bags",
+          "aliases": ["tea bag", "used tea", "green tea bag"],
+          "primary_material": "Organic fiber + paper",
+          "decomposition_years": 0.5,
+          "recycling_steps": [
+            "Remove staple if present",
+            "Add to compost directly",
+            "Loose-leaf tea is fully compostable"
+          ],
+          "carbon_offset_kg_per_kg": 0.15,
+          "landfill_space_cm3_per_unit": 10,
+          "weight_kg_per_unit": 0.003,
+          "handling_tips": "Plastic-mesh tea bags should go to general waste. Prefer paper-only bags.",
+          "hazard_level": "none"
+        }
+      ]
+    },
+    "recyclable_dry": {
+      "display_name": "Recyclable / Dry Waste",
+      "bin_color": "Blue",
+      "bin_hex": "#3b82f6",
+      "handling_summary": "Clean, dry, and segregate by material type before placing in blue bin.",
+      "items": [
+        {
+          "id": "REC-001",
+          "name": "Plastic Bottle",
+          "aliases": ["pet bottle", "water bottle", "soda bottle", "plastic container", "hdpe bottle"],
+          "primary_material": "PET / HDPE Plastic",
+          "decomposition_years": 450,
+          "recycling_steps": [
+            "Rinse thoroughly to remove residue",
+            "Remove cap and label if possible",
+            "Crush to save bin space",
+            "Place in blue recycling bin",
+            "Sorted at MRF into PET/HDPE streams",
+            "Shredded into flakes and pelletized for reuse"
+          ],
+          "carbon_offset_kg_per_kg": 1.5,
+          "landfill_space_cm3_per_unit": 800,
+          "weight_kg_per_unit": 0.025,
+          "handling_tips": "Never place oily or contaminated bottles in recycling. Caps are recyclable separately.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "REC-002",
+          "name": "Cardboard Box",
+          "aliases": ["cardboard", "carton", "corrugated box", "shipping box", "brown box"],
+          "primary_material": "Corrugated Cellulose Fiber",
+          "decomposition_years": 0.17,
+          "recycling_steps": [
+            "Flatten to reduce volume",
+            "Remove tape and staples",
+            "Keep dry — wet cardboard loses recyclability",
+            "Place in blue bin or paper collection point"
+          ],
+          "carbon_offset_kg_per_kg": 0.9,
+          "landfill_space_cm3_per_unit": 20000,
+          "weight_kg_per_unit": 0.4,
+          "handling_tips": "Pizza boxes with grease stains are not recyclable. Tear off clean sections.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "REC-003",
+          "name": "Glass Bottle",
+          "aliases": ["glass jar", "wine bottle", "beer bottle", "glass container"],
+          "primary_material": "Soda-lime glass",
+          "decomposition_years": 1000000,
+          "recycling_steps": [
+            "Rinse clean",
+            "Remove metal lids separately",
+            "Do not break — whole bottles are easier to sort",
+            "Place in glass-specific collection bin"
+          ],
+          "carbon_offset_kg_per_kg": 0.3,
+          "landfill_space_cm3_per_unit": 500,
+          "weight_kg_per_unit": 0.2,
+          "handling_tips": "Coloured glass (amber, green) must be separated from clear glass at advanced facilities.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "REC-004",
+          "name": "Aluminium Can",
+          "aliases": ["aluminum can", "soda can", "beer can", "tin can", "metal can"],
+          "primary_material": "Aluminium alloy",
+          "decomposition_years": 80,
+          "recycling_steps": [
+            "Rinse to remove sugary residue",
+            "Crush flat",
+            "Place in metals bin or blue recycling bin",
+            "Melted at 660°C and re-cast — infinite recyclability"
+          ],
+          "carbon_offset_kg_per_kg": 9.0,
+          "landfill_space_cm3_per_unit": 200,
+          "weight_kg_per_unit": 0.015,
+          "handling_tips": "Aluminium recycling uses 95% less energy than virgin production. Always recycle cans.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "REC-005",
+          "name": "Newspaper",
+          "aliases": ["paper", "magazine", "newspaper", "office paper", "printed paper", "junk mail"],
+          "primary_material": "Cellulose fiber",
+          "decomposition_years": 0.17,
+          "recycling_steps": [
+            "Bundle and tie with twine",
+            "Keep dry and clean",
+            "Drop at paper collection drive or blue bin"
+          ],
+          "carbon_offset_kg_per_kg": 0.7,
+          "landfill_space_cm3_per_unit": 300,
+          "weight_kg_per_unit": 0.1,
+          "handling_tips": "Shredded paper can be added to compost as a carbon source.",
+          "hazard_level": "none"
+        },
+        {
+          "id": "REC-006",
+          "name": "Steel Scrap",
+          "aliases": ["iron scrap", "metal scrap", "steel piece", "ferrous metal"],
+          "primary_material": "Carbon steel / Iron",
+          "decomposition_years": 200,
+          "recycling_steps": [
+            "Separate from non-metal materials",
+            "Place in metals collection bin",
+            "Sent to scrap dealer or steel mill for smelting"
+          ],
+          "carbon_offset_kg_per_kg": 1.8,
+          "landfill_space_cm3_per_unit": 1000,
+          "weight_kg_per_unit": 0.5,
+          "handling_tips": "Steel is 100% recyclable. Avoid mixing with contaminated waste.",
+          "hazard_level": "none"
+        }
+      ]
+    },
+    "e_waste": {
+      "display_name": "E-Waste (Electronic Waste)",
+      "bin_color": "Red",
+      "bin_hex": "#ef4444",
+      "handling_summary": "Never put in regular bins. Deposit at certified e-waste kiosks or registered dismantlers.",
+      "items": [
+        {
+          "id": "EWA-001",
+          "name": "Smartphone",
+          "aliases": ["mobile phone", "cell phone", "iphone", "android phone", "old phone"],
+          "primary_material": "PCB, Lithium, Rare Earth Metals",
+          "decomposition_years": 1000,
+          "recycling_steps": [
+            "Perform factory reset and wipe personal data",
+            "Remove SIM and memory cards",
+            "Deposit at OEM take-back program or certified e-waste kiosk",
+            "Dismantler recovers gold, silver, palladium from PCB",
+            "Battery sent to Li-ion recycling facility"
+          ],
+          "carbon_offset_kg_per_kg": 70.0,
+          "landfill_space_cm3_per_unit": 80,
+          "weight_kg_per_unit": 0.18,
+          "handling_tips": "Never dispose in regular bins. Contains toxic cadmium, lead, and mercury. Data wiping is mandatory.",
+          "hazard_level": "high",
+          "regulatory_note": "E-Waste (Management) Rules 2016 — Producer Responsibility applies."
+        },
+        {
+          "id": "EWA-002",
+          "name": "Laptop",
+          "aliases": ["notebook", "laptop computer", "old laptop", "macbook"],
+          "primary_material": "Aluminium, PCB, Li-Polymer Battery",
+          "decomposition_years": 1000,
+          "recycling_steps": [
+            "Backup and securely wipe all data (DoD 5220.22-M standard)",
+            "Remove battery for separate handling",
+            "Deposit at manufacturer take-back or certified dismantler",
+            "Precious metals recovered via hydrometallurgy"
+          ],
+          "carbon_offset_kg_per_kg": 300.0,
+          "landfill_space_cm3_per_unit": 3000,
+          "weight_kg_per_unit": 1.8,
+          "handling_tips": "Consider refurbishing and donating before disposal. Many NGOs accept functional laptops.",
+          "hazard_level": "high",
+          "regulatory_note": "Extended Producer Responsibility (EPR) compliance mandatory under CPCB India."
+        },
+        {
+          "id": "EWA-003",
+          "name": "CRT Monitor",
+          "aliases": ["old monitor", "cathode ray tube", "old tv", "crt tv"],
+          "primary_material": "Lead glass, CRT phosphor",
+          "decomposition_years": 1000,
+          "recycling_steps": [
+            "Do not break — lead-bearing glass is hazardous",
+            "Contact certified CRT dismantler only",
+            "Lead glass sent to smelters for safe processing"
+          ],
+          "carbon_offset_kg_per_kg": 50.0,
+          "landfill_space_cm3_per_unit": 50000,
+          "weight_kg_per_unit": 15.0,
+          "handling_tips": "CRT monitors contain 4–8 lbs of lead. Illegal to landfill in most jurisdictions.",
+          "hazard_level": "critical",
+          "regulatory_note": "Classified as hazardous waste. Requires manifest tracking per Hazardous Waste Rules."
+        },
+        {
+          "id": "EWA-004",
+          "name": "Printer Cartridge",
+          "aliases": ["ink cartridge", "toner cartridge", "inkjet cartridge", "laser cartridge"],
+          "primary_material": "Plastic, Ink/Toner chemicals",
+          "decomposition_years": 450,
+          "recycling_steps": [
+            "Return via retailer take-back program (HP, Canon, etc.)",
+            "Or drop at e-waste collection drive",
+            "Remanufacturing possible for most cartridge types"
+          ],
+          "carbon_offset_kg_per_kg": 4.0,
+          "landfill_space_cm3_per_unit": 200,
+          "weight_kg_per_unit": 0.07,
+          "handling_tips": "Many office supply stores offer free cartridge recycling drop-off.",
+          "hazard_level": "medium"
+        },
+        {
+          "id": "EWA-005",
+          "name": "Lithium Battery",
+          "aliases": ["li-ion battery", "lithium ion battery", "rechargeable battery", "power bank"],
+          "primary_material": "Lithium cobalt oxide, electrolyte",
+          "decomposition_years": 100,
+          "recycling_steps": [
+            "Never puncture or crush",
+            "Store in fire-proof bag if damaged",
+            "Drop at battery recycling point or e-waste facility",
+            "Hydrometallurgical recovery of lithium, cobalt, nickel"
+          ],
+          "carbon_offset_kg_per_kg": 25.0,
+          "landfill_space_cm3_per_unit": 100,
+          "weight_kg_per_unit": 0.1,
+          "handling_tips": "Damaged Li-ion batteries are fire hazards. Never place in general waste or recycling bins.",
+          "hazard_level": "critical",
+          "regulatory_note": "Aviation and transport restrictions apply to lithium batteries."
+        }
+      ]
+    },
+    "toxic_hazardous": {
+      "display_name": "Toxic / Hazardous Waste",
+      "bin_color": "Black",
+      "bin_hex": "#1f2937",
+      "handling_summary": "Requires special handling. Contact municipal hazardous waste facility or certified disposal agent.",
+      "items": [
+        {
+          "id": "TOX-001",
+          "name": "Paint",
+          "aliases": ["wall paint", "latex paint", "oil paint", "paint can", "spray paint"],
+          "primary_material": "VOC solvents, pigments, resins",
+          "decomposition_years": 50,
+          "recycling_steps": [
+            "Leave lid off to dry out latex paint (acceptable for solid disposal)",
+            "Never pour down drain — contaminates groundwater",
+            "Bring to household hazardous waste (HHW) collection event",
+            "Unopened paint can be donated to community reuse programs"
+          ],
+          "carbon_offset_kg_per_kg": 2.0,
+          "landfill_space_cm3_per_unit": 1000,
+          "weight_kg_per_unit": 1.0,
+          "handling_tips": "Oil-based paint is more hazardous than latex. Store away from heat sources.",
+          "hazard_level": "high"
+        },
+        {
+          "id": "TOX-002",
+          "name": "Motor Oil",
+          "aliases": ["used engine oil", "car oil", "lubricating oil", "waste oil"],
+          "primary_material": "Petroleum hydrocarbons, heavy metals",
+          "decomposition_years": 100,
+          "recycling_steps": [
+            "Collect in sealed, labelled container",
+            "Never mix with other chemicals",
+            "Take to auto shop or municipal oil recycling depot",
+            "Re-refined into base oil or used as fuel supplement"
+          ],
+          "carbon_offset_kg_per_kg": 3.5,
+          "landfill_space_cm3_per_unit": 5000,
+          "weight_kg_per_unit": 4.0,
+          "handling_tips": "One litre of motor oil can contaminate 1 million litres of drinking water.",
+          "hazard_level": "critical"
+        },
+        {
+          "id": "TOX-003",
+          "name": "Fluorescent Tube",
+          "aliases": ["tube light", "CFL bulb", "compact fluorescent", "neon tube", "mercury lamp"],
+          "primary_material": "Mercury, glass, phosphor",
+          "decomposition_years": 1000,
+          "recycling_steps": [
+            "Handle with care — do not break",
+            "Place in original box or padded bag",
+            "Drop at retailer take-back or HHW facility",
+            "Mercury recovered via retort distillation"
+          ],
+          "carbon_offset_kg_per_kg": 5.0,
+          "landfill_space_cm3_per_unit": 800,
+          "weight_kg_per_unit": 0.1,
+          "handling_tips": "If broken indoors, ventilate immediately. Mercury vapour is toxic. Use gloves for cleanup.",
+          "hazard_level": "critical"
+        },
+        {
+          "id": "TOX-004",
+          "name": "Pesticide Container",
+          "aliases": ["insecticide bottle", "herbicide container", "pesticide bottle", "chemical container"],
+          "primary_material": "HDPE plastic + chemical residue",
+          "decomposition_years": 450,
+          "recycling_steps": [
+            "Triple-rinse container",
+            "Puncture to prevent reuse",
+            "Return to AgriShop or agricultural waste collection",
+            "Follow local pesticide disposal regulations"
+          ],
+          "carbon_offset_kg_per_kg": 3.0,
+          "landfill_space_cm3_per_unit": 500,
+          "weight_kg_per_unit": 0.15,
+          "handling_tips": "Never burn pesticide containers. Fumes are highly toxic. Triple-rinse is mandatory.",
+          "hazard_level": "critical"
+        },
+        {
+          "id": "TOX-005",
+          "name": "Medical Sharps",
+          "aliases": ["needle", "syringe", "lancet", "medical needle", "insulin needle"],
+          "primary_material": "Stainless steel, plastic",
+          "decomposition_years": 200,
+          "recycling_steps": [
+            "Place immediately in puncture-resistant sharps container",
+            "Never recap needles",
+            "Seal container when 3/4 full",
+            "Return to pharmacy, clinic, or mail-back sharps program"
+          ],
+          "carbon_offset_kg_per_kg": 0.5,
+          "landfill_space_cm3_per_unit": 5,
+          "weight_kg_per_unit": 0.003,
+          "handling_tips": "Loose needles in bins are a public health and safety risk. Always use sharps containers.",
+          "hazard_level": "critical",
+          "regulatory_note": "Biomedical Waste Management Rules 2016 — Yellow/Red category disposal mandated."
+        }
+      ]
+    }
+  }
+}

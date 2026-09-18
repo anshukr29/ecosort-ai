@@ -1,0 +1,14 @@
+# Core (required)
+streamlit>=1.32.0
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+
+# Google Gemini Vision
+google-generativeai>=0.7.0
+
+# Groq Vision (fallback)
+groq>=0.9.0
+
+# Policy RAG & Analytics
+scikit-learn>=1.3.0
+pandas>=2.0.0
