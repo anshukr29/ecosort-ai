@@ -310,7 +310,7 @@ def _confidence_bar(score: float, method: str) -> None:
         "exact":          "Exact Match",
         "alias":          "Alias Match",
         "fuzzy":          "Fuzzy Match",
-        "gemini":         "EcoSort Vision Vision",
+        "gemini":         "EcoSort Vision",
         "visual":         "Visual / Image Match",
         "visual_fallback":"Visual Fallback (low confidence)",
         "unmatched":      "No Match",
