@@ -68,6 +68,20 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Streamlit Community Cloud floating ribbon, crown aur avatar hide karne ke liye */
+        a[href*="streamlit.io/cloud"],
+        a[href*="share.streamlit.io"],
+        div[class*="StatusWidget"],
+        div[class*="viewerBadge"],
+        div[data-testid="stStatusWidget"],
+        .stAppDeployButton,
+        div[class*="ProfileButton"],
+        div[class*="floating"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        }
         /* Floating Streamlit ribbon and profile badges hide karne ke liye */
         .viewerBadge_container__1QSob,
         .viewerBadge_link__1S137,
