@@ -68,6 +68,17 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Floating Streamlit ribbon and profile badges hide karne ke liye */
+        .viewerBadge_container__1QSob,
+        .viewerBadge_link__1S137,
+         div[class*="viewerBadge"] {
+         display: none !important;
+         }
+
+        /* Floating status widget / profile icon hide karne ke liye */
+        div[data-testid="stStatusWidget"] {
+        display: none !important;
+        }
         /* Hide Top Header, Fork button and GitHub icons */
         header[data-testid="stHeader"] {
             display: none !important;
