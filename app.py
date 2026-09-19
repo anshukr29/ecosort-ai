@@ -73,6 +73,13 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Guest users ke liye Fork aur GitHub icons completely hide karein */
+        [data-testid="stToolbarActions"],
+        header a[href*="github.com"],
+        header [title*="Fork"] {
+            display: none !important;
+        }
+        
         /* Sidebar close button: Prominent solid box + hamesha visible (bina hover ke) */
         [data-testid="stSidebarCollapseButton"],
         [data-testid="stSidebarHeader"] button {
