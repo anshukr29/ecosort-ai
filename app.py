@@ -73,6 +73,27 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Sidebar close button: Prominent solid box + hamesha visible (bina hover ke) */
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarHeader"] button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    transition: none !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 6px !important;
+    padding: 4px !important;
+}
+
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="stSidebarHeader"] button svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
         /* Original Streamlit version text ko hide karein */
         span[class*="e1uy6bjc18"],
         span[class*="h8jyr0"] {
