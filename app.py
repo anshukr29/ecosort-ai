@@ -56,9 +56,14 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        "Get Help": "https://github.com/ecosort-ai",
-        "Report a bug": "https://github.com/ecosort-ai/issues",
-        "About": "EcoSort AI — Enterprise Waste Intelligence | SDG 12 & SDG 11",
+        "About": """
+    ## EcoSort AI ♻️
+    **Enterprise Waste Intelligence & Policy Assistant**
+
+    * **Mission:** Swachh Bharat Mission (SBM-U 2.0) & Mission LiFE
+    * **Standards:** SWM Rules 2016 & SDG 11/12
+    * **Version:** 1.0.0
+    """
     },
 )
 
@@ -68,44 +73,23 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        /* Streamlit Community Cloud floating ribbon, crown aur avatar hide karne ke liye */
-        a[href*="streamlit.io/cloud"],
-        a[href*="share.streamlit.io"],
-        div[class*="StatusWidget"],
-        div[class*="viewerBadge"],
-        div[data-testid="stStatusWidget"],
-        .stAppDeployButton,
-        div[class*="ProfileButton"],
-        div[class*="floating"] {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
+        /* Original Streamlit version text ko hide karein */
+        span[class*="e1uy6bjc18"],
+        span[class*="h8jyr0"] {
+            font-size: 0 !important;
+            line-height: 0 !important;
         }
-        /* Floating Streamlit ribbon and profile badges hide karne ke liye */
-        .viewerBadge_container__1QSob,
-        .viewerBadge_link__1S137,
-         div[class*="viewerBadge"] {
-         display: none !important;
-         }
-
-        /* Floating status widget / profile icon hide karne ke liye */
-        div[data-testid="stStatusWidget"] {
-        display: none !important;
+        
+        /* Uski jagah apna custom AI version show karein */
+        span[class*="e1uy6bjc18"]::after,
+        span[class*="h8jyr0"]::after {
+            content: " 🟢EcoSort AI v1.0.0" !important;
+            font-size: 12px !important;
+            line-height: 24px !important;
+            color: #64748b !important;
+            display: block !important;
         }
-        /* Hide Top Header, Fork button and GitHub icons */
-        header[data-testid="stHeader"] {
-            display: none !important;
-        }
-        [data-testid="stToolbar"] {
-            display: none !important;
-        }
-        button[title="Fork this app"] {
-            display: none !important;
-        }
-        a[href*="github.com"] {
-            display: none !important;
-        }
+        
         /* Main background */
         .stApp { background-color: #f8fafc; }
 
